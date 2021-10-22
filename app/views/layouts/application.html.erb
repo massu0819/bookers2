@@ -7,19 +7,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/c9c396223a.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Bookers</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="/">Bookers</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
            <ul class="navbar-nav">
-           <% if user_signed_in? %>  
+           <% if user_signed_in? %>
              <li class="nav-item">
                <a class="nav-link active" aria-current="page">
                  <%= link_to 'Home', user_path(current_user.id) %>
@@ -61,7 +62,7 @@
                  <%= link_to "Log in", new_user_session_path %>
                </a>
              </li>
-           <% end %>  
+           <% end %>
            </ul>
          </div>
        </div>
