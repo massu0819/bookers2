@@ -1,4 +1,4 @@
-
+<h5 style="color:lime"><%= flash[:notice] %></h5>
 <div class="container px-5 px-sm-0">
   <div class="row">
     <div class="col-md-3">
@@ -46,7 +46,8 @@
               </td>
               <td><%= @book.title %></td>
               <td><%= @book.body %></td>
-              <td><%= link_to 'Destroy', book_path(book.id), method: :delete, data: { confirm: "Are you sure?" }, class:"destroy_#{book.id}" %></td>
+              <td><%= link_to "Edit", edit_book_path(@book.id), class:"btn btn-success btn-sm btn-block mb-3" %></td>
+              <td><%= link_to 'Destroy', book_path(@book.id), method: :delete, data: { confirm: "Are you sure?" }, class:"destroy_#{@book.id} btn btn-danger btn-sm btn-block mb-3" %></td>
             </tr>
         </tbody>
       </table>
