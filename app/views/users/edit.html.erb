@@ -1,6 +1,6 @@
 <h2>User info</h2>
 <% if @user.errors.any? %>
-  <%= @user.errors.count %>error prohibited this obj from being saved:
+  <%= @user.errors.count %>error prohibited this obj from being saved:<br>
   <% @user.errors.full_messages.each do |message| %>
     <%= message %>
   <% end %>
