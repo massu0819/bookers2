@@ -53,10 +53,14 @@
      </nav>
     </header>
     <%# byebug %>
-
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value) %>
     <% end %>
+    <div class="text-center ml-4 mt-5">
+      <% if user_signed_in? %>
+        <%= render 'searchs/form' %>
+      <% end %>
+    </div>
     <%= yield %>
     <footer>
       <div class="container mt-5">
